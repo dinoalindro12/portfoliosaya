@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Dino Aliandro The Coder</title>
+    <title>Portfolio - Arkadius Arsen Aliandro</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -1309,6 +1309,170 @@
           height: 180px;
         }
       }
+      .experience-section {
+        padding: 100px 0;
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.92),
+            rgba(255, 255, 255, 0.92)
+          ),
+          url("https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80")
+            center/cover no-repeat fixed;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 50px auto 0;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background: var(--accent-light-blue);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+        width: 100%;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .timeline-content {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(44, 62, 80, 0.2);
+        width: 45%;
+        position: relative;
+        border-left: 5px solid var(--accent-light-blue);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+        border-left: none;
+        border-right: 5px solid var(--accent-light-blue);
+      }
+
+      .timeline-date {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--accent-light-blue);
+        color: white;
+        padding: 10px 15px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-date {
+        right: -180px;
+      }
+
+      .timeline-item:nth-child(even) .timeline-date {
+        left: -180px;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: var(--accent-light-blue);
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 0 0 3px var(--accent-light-blue);
+      }
+
+      .job-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.4rem;
+        color: var(--accent-blue);
+        margin-bottom: 10px;
+      }
+
+      .company {
+        font-weight: 600;
+        color: var(--accent-light-blue);
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+      }
+
+      .job-description {
+        color: var(--text-dark);
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .job-responsibilities {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .job-responsibilities li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 8px;
+        color: var(--text-dark);
+      }
+
+      .job-responsibilities li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: var(--accent-light-blue);
+        font-weight: bold;
+      }
+
+      /* Mobile Responsive untuk Timeline */
+      @media (max-width: 768px) {
+        .timeline::before {
+          left: 30px;
+        }
+
+        .timeline-content {
+          width: calc(100% - 80px);
+          margin-left: 80px !important;
+          margin-right: 0 !important;
+        }
+
+        .timeline-date {
+          position: relative;
+          top: 0;
+          left: 0 !important;
+          right: 0 !important;
+          transform: none;
+          margin-bottom: 15px;
+          display: inline-block;
+        }
+
+        .timeline-dot {
+          left: 30px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content,
+        .timeline-item:nth-child(even) .timeline-content {
+          border-left: 5px solid var(--accent-light-blue);
+          border-right: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1369,6 +1533,7 @@
         <ul>
           <li><a href="#home" class="active">Home</a></li>
           <li><a href="#about">Tentang</a></li>
+          <li><a href="#experience">Pengalaman</a></li>
           <li><a href="#skills">Keahlian</a></li>
           <li><a href="#projects">Proyek</a></li>
           <li><a href="#contact">Kontak</a></li>
@@ -1389,10 +1554,10 @@
         <h3 class="subtitle">Portfolio</h3>
 
         <div class="name-container">
-          <h1 class="name-title">Dino <span>Aliandro</span></h1>
+          <h1 class="name-title">Arkadius <span>Aliandro</span></h1>
         </div>
 
-        <p class="role-text">Full Stack Developer</p>
+        <p class="role-text">Junior Laravel Developer</p>
 
         <p class="tagline">Mengubah Ide Menjadi Kode yang Berarti</p>
 
@@ -1422,7 +1587,7 @@
         <div class="quote">
           "Kode yang baik adalah seperti puisi; ia mengkomunikasikan
           kompleksitas dengan keanggunan dan presisi."<br />
-          <strong>- Dino Aliandro -</strong>
+          <strong>- Arkadius Aliandro -</strong>
         </div>
 
         <a href="#projects" class="cta-btn">
@@ -1446,27 +1611,103 @@
           <div class="about-card">
             <img
               src="daliandro.png"
-              alt="Dino Aliandro"
+              alt="Arkadius Arsen Aliandro"
               class="profile-image"
             />
-            <h3 class="about-name">Dino Aliandro</h3>
-            <p class="about-role">Full Stack Developer</p>
+            <h3 class="about-name">Arkadius Arsen Aliandro</h3>
+            <p class="about-role">Junior Laravel Developer</p>
             <p class="about-description">
-              Saya adalah seorang Full Stack Developer dengan passion dalam
-              menciptakan solusi digital yang inovatif dan user-friendly. Dengan
-              pengalaman lebih dari 5 tahun di industri teknologi, saya telah
-              mengembangkan berbagai aplikasi web dan mobile untuk berbagai
-              klien dari startup hingga perusahaan besar.
+              Saya adalah seorang Junior Laravel Developer dengan beberapa
+              pengalaman di bidang development aplikasi mulai dari website
+              sekolah, website desa, website penggajian karyawan, serta profil
+              perusahaan. Saya memiliki kecepatan dalam menyesuaikan diri dan
+              mampu belajar lebih cepat khususnya dalam mengoperasikan sistem
+              berbasis komputer.
               <br /><br />
-              Saya memiliki keahlian dalam berbagai teknologi modern termasuk
-              JavaScript, React, Node.js, Python, dan banyak lagi. Saya percaya
-              bahwa kode yang baik tidak hanya berfungsi dengan baik tetapi juga
-              mudah dipahami, dipelihara, dan dikembangkan.
+              Saat ini saya sedang menempuh semester akhir program Sarjana
+              Sistem Informasi di STMIK Triguna Dharma. Saya terbiasa terlibat
+              dalam bidang web development baik untuk tugas kuliah maupun proyek
+              nyata. Saya juga pernah menjadi mitra Kemendikbud dalam program
+              Kampus Mengajar angkatan 8.
               <br /><br />
-              Selain coding, saya juga memiliki minat dalam UI/UX design dan
-              selalu berusaha untuk menciptakan pengalaman pengguna yang luar
-              biasa.
+              Selain coding, saya memiliki pengalaman dalam kepemimpinan dan
+              manajemen tim dari pengalaman kerja saya sebagai Kitchen Leader di
+              Dear Butter Medan.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+      <div class="section-container">
+        <h2 class="section-title">Pengalaman Kerja</h2>
+
+        <div class="timeline">
+          <!-- Kitchen Leader -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="job-title">Kitchen Leader</h3>
+              <p class="company">Dear Butter Medan</p>
+              <div class="timeline-date">Maret 2024 - September 2024</div>
+              <ul class="job-responsibilities">
+                <li>Memperhatikan jumlah stok dan kualitas bahan baku</li>
+                <li>Menjaga situasi outlet tetap aman</li>
+                <li>Menghitung gaji karyawan</li>
+                <li>Memperhatikan manajemen stok dan manajemen karyawan</li>
+                <li>Menegur dan memberhentikan karyawan yang tidak disiplin</li>
+                <li>
+                  Menilai kelayakan kandidat dan memberi pertimbangan dalam
+                  penerimaan karyawan baru
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Quality Controller -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="job-title">Quality Controller</h3>
+              <p class="company">Dear Butter Medan</p>
+              <div class="timeline-date">Mei 2022 - Maret 2024</div>
+              <ul class="job-responsibilities">
+                <li>
+                  Mengecek kebersihan outlet Dear Butter di seluruh Kota Medan
+                </li>
+                <li>
+                  Mengecek ketersediaan bahan baku sekaligus expire-datenya
+                </li>
+                <li>Menilai kualitas outlet Dear Butter di Kota Medan</li>
+                <li>
+                  Membangun komunikasi yang baik dengan karyawan outlet Dear
+                  Butter yang lain
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Interviewer -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="job-title">Interviewer</h3>
+              <p class="company">Dear Butter Medan</p>
+              <div class="timeline-date">Mei 2023 - Agustus 2024</div>
+              <ul class="job-responsibilities">
+                <li>Mewawancarai kandidat karyawan Dear Butter Cemara Asri</li>
+                <li>
+                  Menentukan apakah kandidat karyawan bisa diterima bekerja atau
+                  tidak
+                </li>
+                <li>
+                  Memberikan teguran hingga pemecatan bagi karyawan yang tidak
+                  disiplin dan yang bekerja tidak sesuai SOP yang berlaku
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -1479,15 +1720,16 @@
         <div class="skills-grid">
           <div class="skill-card">
             <div class="skill-icon">
-              <i class="fab fa-js-square"></i>
+              <i class="fab fa-laravel"></i>
             </div>
-            <h3 class="skill-title">Frontend Development</h3>
+            <h3 class="skill-title">Laravel Development</h3>
             <div class="skill-details">
               <p>
-                Pengembangan antarmuka pengguna yang responsif dan interaktif
-                menggunakan teknologi modern.
+                Pengembangan aplikasi web menggunakan framework Laravel untuk
+                berbagai kebutuhan seperti website sekolah, desa, dan sistem
+                penggajian.
               </p>
-              <p class="skill-level">Teknologi: PHP, Laravel dan Data Mining</p>
+              <p class="skill-level">Teknologi: Laravel, PHP</p>
             </div>
           </div>
           <div class="skill-card">
@@ -1497,10 +1739,10 @@
             <h3 class="skill-title">Backend Development</h3>
             <div class="skill-details">
               <p>
-                Membangun API yang aman dan scalable serta mengelola database
-                dan server.
+                Membangun API dan sistem backend untuk aplikasi web dengan fokus
+                pada keamanan dan skalabilitas.
               </p>
-              <p class="skill-level">Laravel 12</p>
+              <p class="skill-level">Laravel, MySQL, SQLite</p>
             </div>
           </div>
           <div class="skill-card">
@@ -1510,10 +1752,23 @@
             <h3 class="skill-title">Database Management</h3>
             <div class="skill-details">
               <p>
-                Desain, optimasi, dan manajemen database relasional dan
-                non-relasional.
+                Desain, optimasi, dan manajemen database relasional untuk
+                aplikasi web.
               </p>
-              <p class="skill-level">Teknologi: MySQL dan sqlite</p>
+              <p class="skill-level">Teknologi: MySQL dan SQLite</p>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h3 class="skill-title">Data Mining</h3>
+            <div class="skill-details">
+              <p>
+                Pengalaman dalam kegiatan data mining untuk analisis dan
+                pengolahan data.
+              </p>
+              <p class="skill-level">Teknologi: KNN, dan algoritma lainnya</p>
             </div>
           </div>
         </div>
@@ -1528,7 +1783,7 @@
           <div class="project-card">
             <img
               src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-              alt="E-commerce Platform"
+              alt="Website Profile Perusahaan"
               class="project-image"
             />
             <div class="project-content">
@@ -1538,91 +1793,8 @@
                 karyawan dan penggajian pada PT Surya Tamado Mandiri
               </p>
               <div class="project-tech">
-                <span class="tech-tag">Laravel 12</span>
-                <span class="tech-tag">MySql</span>
-              </div>
-              <a href="#" class="project-link">Lihat Proyek</a>
-            </div>
-          </div>
-          <div class="project-card">
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Task Management App"
-              class="project-image"
-            />
-            <div class="project-content">
-              <h3 class="project-title">Task Management App</h3>
-              <p class="project-description">
-                Aplikasi manajemen tugas dengan fitur kolaborasi real-time,
-                notifikasi, dan analitik produktivitas.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Vue.js</span>
-                <span class="tech-tag">Firebase</span>
-                <span class="tech-tag">PWA</span>
-                <span class="tech-tag">Chart.js</span>
-              </div>
-              <a href="#" class="project-link">Lihat Proyek</a>
-            </div>
-          </div>
-          <div class="project-card">
-            <img
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Social Media Dashboard"
-              class="project-image"
-            />
-            <div class="project-content">
-              <h3 class="project-title">Social Media Dashboard</h3>
-              <p class="project-description">
-                Dashboard analitik media sosial dengan visualisasi data
-                real-time dan laporan performa.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">D3.js</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">PostgreSQL</span>
-              </div>
-              <a href="#" class="project-link">Lihat Proyek</a>
-            </div>
-          </div>
-          <div class="project-card">
-            <img
-              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Health & Fitness App"
-              class="project-image"
-            />
-            <div class="project-content">
-              <h3 class="project-title">Health & Fitness App</h3>
-              <p class="project-description">
-                Aplikasi kesehatan dan kebugaran dengan pelacakan aktivitas,
-                rencana nutrisi, dan integrasi wearable.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">React Native</span>
-                <span class="tech-tag">GraphQL</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">AWS</span>
-              </div>
-              <a href="#" class="project-link">Lihat Proyek</a>
-            </div>
-          </div>
-          <div class="project-card">
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Learning Management System"
-              class="project-image"
-            />
-            <div class="project-content">
-              <h3 class="project-title">Website Profil Sekolah</h3>
-              <p class="project-description">
-                Platform e-learning dengan kursus online, sistem penilaian, dan
-                sertifikat digital.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Laravel 12</span>
+                <span class="tech-tag">Laravel</span>
                 <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">Tailwind CSS</span>
               </div>
               <a href="#" class="project-link">Lihat Proyek</a>
             </div>
@@ -1630,20 +1802,56 @@
           <div class="project-card">
             <img
               src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Real Estate Platform"
+              alt="Website Desa"
               class="project-image"
             />
             <div class="project-content">
-              <h3 class="project-title">Real Estate Platform</h3>
+              <h3 class="project-title">Website Desa</h3>
               <p class="project-description">
-                Platform properti dengan pencarian cerdas, virtual tour, dan
-                sistem booking properti.
+                Website informasi dan layanan untuk desa dengan fitur
+                administrasi dan pelaporan.
               </p>
               <div class="project-tech">
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">Mapbox</span>
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+              <a href="#" class="project-link">Lihat Proyek</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Website Sekolah"
+              class="project-image"
+            />
+            <div class="project-content">
+              <h3 class="project-title">Website Sekolah</h3>
+              <p class="project-description">
+                Sistem informasi sekolah dengan manajemen data siswa, guru, dan
+                akademik.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+              <a href="#" class="project-link">Lihat Proyek</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="E-Rekrutmen"
+              class="project-image"
+            />
+            <div class="project-content">
+              <h3 class="project-title">Sistem E-Rekrutmen</h3>
+              <p class="project-description">
+                Sistem rekrutmen online untuk PT Surya Tamado Mandiri dengan
+                manajemen kandidat dan proses seleksi.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">MySQL</span>
               </div>
               <a href="#" class="project-link">Lihat Proyek</a>
             </div>
@@ -1665,7 +1873,7 @@
           <input
             type="hidden"
             name="_subject"
-            value="Pesan dari Portfolio Dino Aliandro"
+            value="Pesan dari Portfolio Arkadius Aliandro"
           />
 
           <div class="form-group">
@@ -1740,8 +1948,8 @@
         <h2 class="footer-name">Arkadius Arsen Aliandro</h2>
 
         <p class="footer-text">
-          Full Stack Developer dengan passion untuk menciptakan solusi digital
-          yang inovatif dan berdampak.
+          Junior Laravel Developer dengan passion untuk menciptakan solusi
+          digital yang inovatif dan berdampak.
         </p>
 
         <div class="footer-tagline">
@@ -1752,20 +1960,20 @@
           <h3 class="skills-title">Teknologi yang Dikuasai</h3>
           <div class="skills-list">
             <div class="skill-group">
-              <p class="skill-category">Frontend</p>
-              <p class="skill-items">Laravel 12</p>
+              <p class="skill-category">Framework</p>
+              <p class="skill-items">Laravel</p>
             </div>
             <div class="skill-group">
-              <p class="skill-category">Backend</p>
-              <p class="skill-items">Laravel 12</p>
+              <p class="skill-category">Bahasa Pemrograman</p>
+              <p class="skill-items">PHP</p>
             </div>
             <div class="skill-group">
               <p class="skill-category">Data Mining</p>
-              <p class="skill-items">KNN etc.</p>
+              <p class="skill-items">KNN, dll.</p>
             </div>
             <div class="skill-group">
               <p class="skill-category">Database</p>
-              <p class="skill-items">MySQL</p>
+              <p class="skill-items">MySQL, SQLite</p>
             </div>
           </div>
         </div>
@@ -1780,14 +1988,8 @@
           >
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-dribbble"></i>
+          <a href="https://arkadiusportfolio.netlify.app/" class="social-link">
+            <i class="fas fa-globe"></i>
           </a>
         </div>
 
@@ -1812,10 +2014,10 @@
         <div class="footer-bottom">
           <p>
             "Kemarahan pada takdir adalah cinta yang belum menemukan bahasanya."
-            - Dino Aliandro
+            - Arkadius Aliandro
           </p>
           <p style="margin-top: 15px">
-            © 2023 Portfolio Dino Aliandro. All rights reserved.
+            © 2024 Portfolio Arkadius Aliandro. All rights reserved.
           </p>
         </div>
       </div>
@@ -1876,7 +2078,7 @@
           // Buat elemen anchor untuk download
           const downloadLink = document.createElement("a");
           downloadLink.href = resumeUrl;
-          downloadLink.download = "CV_Dino_Aliandro.pdf"; // Nama file saat di-download
+          downloadLink.download = "CV_Arkadius_Aliandro.pdf"; // Nama file saat di-download
           downloadLink.target = "_blank";
 
           // Trigger download
@@ -1885,7 +2087,7 @@
           document.body.removeChild(downloadLink);
 
           // Optional: Tampilkan notifikasi
-          alert("Download CV Dino Aliandro akan segera dimulai...");
+          alert("Download CV Arkadius Aliandro akan segera dimulai...");
         });
       }
 
@@ -1962,9 +2164,9 @@
       window.addEventListener("load", function () {
         setTimeout(() => {
           animateCounter("projectsCount", 4);
-          animateCounter("clientsCount", 4);
+          animateCounter("clientsCount", 3);
           animateCounter("experienceCount", 2);
-          animateCounter("technologiesCount", 3);
+          animateCounter("technologiesCount", 4);
         }, 500);
       });
     </script>
